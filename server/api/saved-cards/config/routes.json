@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/saved-cards",
+      "handler": "saved-cards.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/saved-cards/count",
+      "handler": "saved-cards.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/saved-cards/:id",
+      "handler": "saved-cards.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/saved-cards",
+      "handler": "saved-cards.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/saved-cards/:id",
+      "handler": "saved-cards.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/saved-cards/:id",
+      "handler": "saved-cards.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  nextjs:
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    ports:
+      - '3000:3000'
+    depends_on:
+      - strapi
+  strapi:
+    build:
+      dockerfile: Dockerfile
+      context: ./server
+    ports:
+      - '1337:1337'
+  nginx:
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx/prod
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - nextjs
+      - strapi
+    restart: always

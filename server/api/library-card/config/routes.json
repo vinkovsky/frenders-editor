@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/library-cards",
+      "handler": "library-card.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/library-cards/count",
+      "handler": "library-card.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/library-cards/:id",
+      "handler": "library-card.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/library-cards",
+      "handler": "library-card.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/library-cards/:id",
+      "handler": "library-card.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/library-cards/:id",
+      "handler": "library-card.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

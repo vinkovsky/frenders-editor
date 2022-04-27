@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saved_cards",
+  "info": {
+    "name": "savedCards",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nameGroup": {
+      "type": "string"
+    },
+    "nameProject": {
+      "type": "string"
+    },
+    "dataModel": {
+      "type": "json"
+    },
+    "user": {
+      "via": "saved_cards",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "savedUvwData": {
+      "type": "json"
+    },
+    "savedPreviewImage": {
+      "type": "string"
+    },
+    "savedModelData": {
+      "type": "json"
+    },
+    "savedCameraData": {
+      "type": "json"
+    },
+    "savedAssetsData": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "library_cards",
+  "info": {
+    "name": "LibraryCard",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "default": 300,
+      "required": true
+    },
+    "colorChip": {
+      "type": "string",
+      "required": true
+    },
+    "favorite": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "model": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "categoryItem": {
+      "type": "string"
+    }
+  }
+}

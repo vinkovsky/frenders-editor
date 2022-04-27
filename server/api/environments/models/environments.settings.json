@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "environments",
+  "info": {
+    "name": "Environments"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "hdr": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "exposure": {
+      "type": "float"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
